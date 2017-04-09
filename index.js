@@ -1,72 +1,204 @@
 const hasOwnProperty = Object.prototype.hasOwnProperty;
-const a = {
-  Ё: 'Yo',
-  Й: 'I',
-  Ц: 'Ts',
-  У: 'U',
-  К: 'K',
-  Е: 'E',
-  Н: 'N',
-  Г: 'G',
-  Ш: 'Sh',
-  Щ: 'Sch',
-  З: 'Z',
-  Х: 'H',
-  Ъ: '',
-  ё: 'yo',
-  й: 'i',
-  ц: 'ts',
-  у: 'u',
-  к: 'k',
-  е: 'e',
-  н: 'n',
-  г: 'g',
-  ш: 'sh',
-  щ: 'sch',
-  з: 'z',
-  х: 'h',
-  ъ: '',
-  Ф: 'F',
-  Ы: 'I',
-  В: 'V',
-  А: 'a',
-  П: 'P',
-  Р: 'R',
-  О: 'O',
-  Л: 'L',
-  Д: 'D',
-  Ж: 'Zh',
-  Э: 'E',
-  ф: 'f',
-  ы: 'i',
-  в: 'v',
-  а: 'a',
-  п: 'p',
-  р: 'r',
-  о: 'o',
-  л: 'l',
-  д: 'd',
-  ж: 'zh',
-  э: 'e',
-  Я: 'Ya',
-  Ч: 'Ch',
-  С: 'S',
-  М: 'M',
-  И: 'I',
-  Т: 'T',
-  Ь: '',
-  Б: 'B',
-  Ю: 'Yu',
-  я: 'ya',
-  ч: 'ch',
-  с: 's',
-  м: 'm',
-  и: 'i',
-  т: 't',
-  ь: '',
-  б: 'b',
-  ю: 'yu',
-};
+const a = Object.create(null, {
+  Ё: {
+    value: 'Yo',
+  },
+  Й: {
+    value: 'I',
+  },
+  Ц: {
+    value: 'Ts',
+  },
+  У: {
+    value: 'U',
+  },
+  К: {
+    value: 'K',
+  },
+  Е: {
+    value: 'E',
+  },
+  Н: {
+    value: 'N',
+  },
+  Г: {
+    value: 'G',
+  },
+  Ш: {
+    value: 'Sh',
+  },
+  Щ: {
+    value: 'Sch',
+  },
+  З: {
+    value: 'Z',
+  },
+  Х: {
+    value: 'H',
+  },
+  Ъ: {
+    value: '',
+  },
+  ё: {
+    value: 'yo',
+  },
+  й: {
+    value: 'i',
+  },
+  ц: {
+    value: 'ts',
+  },
+  у: {
+    value: 'u',
+  },
+  к: {
+    value: 'k',
+  },
+  е: {
+    value: 'e',
+  },
+  н: {
+    value: 'n',
+  },
+  г: {
+    value: 'g',
+  },
+  ш: {
+    value: 'sh',
+  },
+  щ: {
+    value: 'sch',
+  },
+  з: {
+    value: 'z',
+  },
+  х: {
+    value: 'h',
+  },
+  ъ: {
+    value: '',
+  },
+  Ф: {
+    value: 'F',
+  },
+  Ы: {
+    value: 'I',
+  },
+  В: {
+    value: 'V',
+  },
+  А: {
+    value: 'a',
+  },
+  П: {
+    value: 'P',
+  },
+  Р: {
+    value: 'R',
+  },
+  О: {
+    value: 'O',
+  },
+  Л: {
+    value: 'L',
+  },
+  Д: {
+    value: 'D',
+  },
+  Ж: {
+    value: 'Zh',
+  },
+  Э: {
+    value: 'E',
+  },
+  ф: {
+    value: 'f',
+  },
+  ы: {
+    value: 'i',
+  },
+  в: {
+    value: 'v',
+  },
+  а: {
+    value: 'a',
+  },
+  п: {
+    value: 'p',
+  },
+  р: {
+    value: 'r',
+  },
+  о: {
+    value: 'o',
+  },
+  л: {
+    value: 'l',
+  },
+  д: {
+    value: 'd',
+  },
+  ж: {
+    value: 'zh',
+  },
+  э: {
+    value: 'e',
+  },
+  Я: {
+    value: 'Ya',
+  },
+  Ч: {
+    value: 'Ch',
+  },
+  С: {
+    value: 'S',
+  },
+  М: {
+    value: 'M',
+  },
+  И: {
+    value: 'I',
+  },
+  Т: {
+    value: 'T',
+  },
+  Ь: {
+    value: '',
+  },
+  Б: {
+    value: 'B',
+  },
+  Ю: {
+    value: 'Yu',
+  },
+  я: {
+    value: 'ya',
+  },
+  ч: {
+    value: 'ch',
+  },
+  с: {
+    value: 's',
+  },
+  м: {
+    value: 'm',
+  },
+  и: {
+    value: 'i',
+  },
+  т: {
+    value: 't',
+  },
+  ь: {
+    value: '',
+  },
+  б: {
+    value: 'b',
+  },
+  ю: {
+    value: 'yu',
+  },
+});
 
 function mapWords(char) {
   return hasOwnProperty.call(a, char) ? a[char] : char;
