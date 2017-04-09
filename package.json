@@ -1,10 +1,10 @@
 {
   "name": "transliterate",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Transliterates cyrillic symbols into latin ones",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint . && jest"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,17 @@
     "functional"
   ],
   "author": "Vitaly Aminev",
-  "license": "BSD",
+  "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "031e90a24c59f9ab5d04956a67c605618d2ae65a"
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.19.0",
+    "eslint-config-makeomatic": "^1.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "jest": "^19.0.2"
+  },
+  "engine": {
+    "node": ">= 4.0.0"
+  }
 }
